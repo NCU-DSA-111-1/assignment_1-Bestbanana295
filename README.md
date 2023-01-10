@@ -4,6 +4,7 @@
  make
 
 ## Run
+cd bin
 ./backprop
 
 
