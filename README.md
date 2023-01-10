@@ -8,6 +8,22 @@ cd bin
 
 ./backprop
 
+## File Structure
+
+```bash
+        DSA_Assignment1_2/
+        ├──bin/         # binary file which can execute
+        │   
+        ├──obj/         # object file which can be linked
+        │ 
+        │   
+        ├──src/         # C code
+        │   
+        │
+        ├──inc          # header
+        ├──Makefile     # make file
+        └──README.md    # this file 
+
 
 ## Usage
 
