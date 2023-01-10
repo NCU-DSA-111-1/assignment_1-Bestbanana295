@@ -5,6 +5,7 @@
 
 ## Run
 cd bin
+
 ./backprop
 
 
