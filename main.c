@@ -16,6 +16,15 @@ int n=1;
 
 int main(void)
 {
+    // Open a file
+    FILE *fp = fopen("output.txt","w");
+    if(fp == NULL)
+    {
+        printf("Error opening file...\n");
+        exit(0);
+    }
+
+
     int i;
 
     srand(time(0));
@@ -63,6 +72,11 @@ int main(void)
     }
 
     cost = (float *) malloc(num_neurons[num_layers-1] * sizeof(float));
+
+    
+
+
+
     memset(cost,0,num_neurons[num_layers-1]*sizeof(float));
 
     // Get Training Examples
@@ -226,7 +240,7 @@ void train_neural_net(void)
     int it=0;
 
     // Gradient Descent
-    for(it=0;it<20000;it++)
+    for(it=0;it<200;it++)
     {
         for(i=0;i<num_training_ex;i++)
         {
@@ -310,14 +324,20 @@ void compute_cost(int i)
 
     for(j=0;j<num_neurons[num_layers-1];j++)
     {
+
         tmpcost = desired_outputs[i][j] - lay[num_layers-1].neu[j].actv;
         cost[j] = (tmpcost * tmpcost)/2;
+
         tcost = tcost + cost[j];
     }   
 
     full_cost = (full_cost + tcost)/n;
+    FILE *fp = fopen("output.txt","a+");
+    //write in the file 
+    fprintf(fp, "%f ", full_cost);
+    printf("Full Cost: %f\n",full_cost);
+    fclose(fp);
     n++;
-    // printf("Full Cost: %f\n",full_cost);
 }
 
 // Back Propogate Error

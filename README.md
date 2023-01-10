@@ -1,5 +1,12 @@
 # Neural-Network-framework-using-Backpropogation-in-C
 
+## Compile 
+ make
+
+## Run
+./backprop
+
+
 ## Usage
 
 Enter the number of Layers in Neural Network: 4 <br />
@@ -7,7 +14,8 @@ Enter number of neurons in layer[1]:  2 <br />
 Enter number of neurons in layer[2]:  4 <br />
 Enter number of neurons in layer[3]:  4 <br />
 Enter number of neurons in layer[4]:  1 <br />
-<br />
+<br />\
+
 Created Layer: 1 <br />
 Number of Neurons in Layer 1: 2 <br />
 Neuron 1 in Layer 1 created <br />
